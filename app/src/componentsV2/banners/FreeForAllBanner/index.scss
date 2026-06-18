@@ -1,0 +1,51 @@
+.free-forall-banner + .app-layout {
+  height: calc(100vh - 48px);
+}
+
+.free-forall-banner {
+  position: relative;
+  background: #0284c7;
+  padding: 8px 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  z-index: 1000;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-badge {
+    padding: 4px 8px;
+    color: var(--requestly-color-text-default);
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+    line-height: 12px;
+    background: #0369a1;
+    border-radius: 4px;
+  }
+
+  &-text {
+    color: var(--requestly-color-text-default);
+    font-weight: 500;
+  }
+
+  &-close-btn {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--requestly-color-text-default);
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

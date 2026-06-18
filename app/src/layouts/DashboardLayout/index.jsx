@@ -20,6 +20,7 @@ import { httpsCallable, getFunctions } from "firebase/functions";
 import { globalActions } from "store/slices/global/slice";
 import Logger from "lib/logger";
 import { PlanExpiredBanner } from "componentsV2/banners/PlanExpiredBanner";
+import { FreeForAllBanner } from "componentsV2/banners/FreeForAllBanner";
 import { getShouldShowDesktopConnected, useDesktopAppConnection } from "hooks/useDesktopAppConnection";
 import "./DashboardLayout.scss";
 import { ConnectedToDesktopView } from "./ConnectedToDesktopView/ConnectedToDesktopView";
@@ -98,6 +99,7 @@ const DashboardLayout = () => {
 
   return (
     <>
+      <FreeForAllBanner />
       <AppNotificationBanner />
       <PlanExpiredBanner />
 

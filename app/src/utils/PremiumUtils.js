@@ -26,12 +26,7 @@ export const getPlanNameFromId = (planId) => {
 };
 
 export const isPremiumPlan = (planId) => {
-  if (!planId) return false;
-  const planName = planId.split("_")[0];
-
-  if (PRICING.PREMIUM_PLANS.includes(planName)) return true;
-
-  return false;
+  return true;
 };
 
 export const isPlanExpired = (planDetails) => {
@@ -50,21 +45,7 @@ export const isPlanExpired = (planDetails) => {
 };
 
 export const isPremiumUser = (userPlanDetails) => {
-  if (!userPlanDetails) {
-    return false;
-  }
-
-  // Handle Case - Status node is not there in referral type
-  if (userPlanDetails.type === "referral") {
-    return isPremiumPlan(userPlanDetails.planId) && !isPlanExpired(userPlanDetails);
-  }
-
-  // For all other types eg Unlock, Team, Individual, Paypal
-  return (
-    ["active", "trialing", "past_due"].includes(userPlanDetails.status) &&
-    isPremiumPlan(userPlanDetails.planId) &&
-    !isPlanExpired(userPlanDetails)
-  );
+  return true;
 };
 
 export const getPlanName = (planDetails) => {

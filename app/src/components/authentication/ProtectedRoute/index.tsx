@@ -24,7 +24,7 @@ function ProtectedRoute<P>({
 }: Props<P> & Partial<P>) {
   // Global State
   const user = useSelector(getUserAuthDetails);
-  const isPremiumUser = !!user.details?.isPremium;
+  const isPremiumUser = true;
 
   return (
     <React.Fragment>
